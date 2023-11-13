@@ -1,0 +1,99 @@
+.modal-page {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.modal-page.open {
+    height: 100vh;
+}
+
+.modal-page-content {
+    /* padding: 10px; */
+    width: 350px;
+    min-height: 250px;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.7s ease-in-out;
+    transform: translateY(-100%);
+}
+
+.modal-page.open .modal-page-content {
+    transform: translateY(0);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-top {
+    display: flex;
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    /* gap: 75%; */
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+    
+}
+
+.modal-top a {
+    text-decoration: none;
+    padding: 8px;
+}
+
+.modal-top p {
+    text-transform: uppercase;
+}
+
+.modal-main p {
+    text-align:  center;
+}
+
+.modal-main .boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 15px;
+}
+
+.modal-main .boxes div {
+    background-color: lime;
+    width: 80px;
+    padding: 5px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-bottom button {
+    padding: 6px;
+    background-color: rgb(75, 75, 245);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 450px) {
+    .modal-main .boxes {
+        flex-direction: column;
+    }
+    .modal-main .boxes div {
+        width: 100%;
+    }
+}
