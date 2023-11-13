@@ -17,7 +17,6 @@
 }
 
 .modal-page-content {
-    /* padding: 10px; */
     width: 350px;
     min-height: 250px;
     border-radius: 10px;
@@ -41,8 +40,8 @@
 .modal-top {
     display: flex;
     width: 100%;
+    height: 30px;
     border-radius: 10px 10px 0 0 ;
-    /* gap: 75%; */
     justify-content: space-between;
     align-items: center;
     background-color: rgb(221, 221, 221);
@@ -86,7 +85,7 @@
     cursor: pointer;
     border-radius: 5px;
     width: 100px;
-    margin-top: 15px;
+    margin-top: 35px;
 }
 
 @media screen and (max-width: 450px) {
@@ -94,6 +93,25 @@
         flex-direction: column;
     }
     .modal-main .boxes div {
-        width: 100%;
+        min-width: 200%;
+    }
+    .modal-bottom button {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .modal-page-content {
+        width: 70%;
+    }
+
+    .modal-main .boxes div {
+        min-width: 170%;
+    }
+}
+
+@media screen and (max-width: 280px) { 
+    .modal-main .boxes div {
+        min-width: 130%;
     }
 }

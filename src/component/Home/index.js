@@ -3,7 +3,7 @@ import Button from '../Button';
 import ModalPage from '../Modal';
 import '../../assets/styles/home.css';
 
-// rfce - for quick creation
+
 function Home() {
 
   const [isModalPageOpen, setIsModalPageOpen] = useState(false);
